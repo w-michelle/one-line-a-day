@@ -22,6 +22,8 @@
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --font-weight-light: 300;
@@ -328,6 +330,10 @@
   .text-center {
     text-align: center;
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -408,6 +414,13 @@
     &:hover {
       @media (hover: hover) {
         color: #001bff;
+      }
+    }
+  }
+  .hover\:text-\[\#001bff\]\/60 {
+    &:hover {
+      @media (hover: hover) {
+        color: color-mix(in oklab, #001bff 60%, transparent);
       }
     }
   }
