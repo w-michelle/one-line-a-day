@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="/css/output.css"
+    />
+  </head>
+  <body class="min-h-screen bg-black text-neutral-300 m-4">
+    <%- include("../partials/navbar") %>
+
+    <main class="flex flex-col items-center justify-center mt-10 gap-4">
+      <h1 class="text-center">Enter the 4 digit code</h1>
+        <form action="/auth/join/<%= currentUser._id %>" method="POST" class="flex flex-col items-center">
+            <fieldset>
+                <% for(let i = 0; i < 4; i++) { %>
+                    <input type="text" name="passcode" maxlength="1" required class="w-9.5 h-9.5 text-center border rounded-md text-sm bg-neutral-900 text-neutral-300">
+                
+                <% } %>
+            </fieldset>
+            <% if(error) { %>
+                <p class="text-red-500 text-sm mt-3" role="alert"><%= error %></p>
+            <% } %>
+            
+            <button type="submit" class="hover:cursor-pointer mt-4 text-sm py-2 bg-[#001bff]/60 hover:bg-[#001bff] w-20 rounded-md tracking-widest">JOIN</button>
+
+
+        </form>
+      </main>
+  </body>
+</html>

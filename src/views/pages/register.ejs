@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= title %></title>
+     <link
+      rel="stylesheet"
+      href="/css/output.css"
+    >
+  </head>
+  <body class="min-h-screen bg-black text-neutral-300 m-4">
+     <nav>
+       <a href="/" class="text-[#001bff]">
+            &lt; Home
+        </a>
+     </nav>
+
+         <main class="flex justify-center mt-10">
+        
+             <form action="/auth/register" method="POST" >
+                <h1 class="text-xl text-center">Register</h1>
+                <p class="text-sm mt-2 w-full text-center">Have an account? <a href="/login" class="underline text-[#001bff]">Sign In</a></p>
+                <div class="flex flex-col gap-2 mt-4">
+                <label for="username">Username </label>
+                <input type="text" name="username" id="username" required class="bg-neutral-300 text-black border-2 my-1 p-2 font-light rounded-md outline-none border-neutral-300">
+                <label for="email">Email </label>
+                <input type="email" name="email" id="email" required class="bg-neutral-300 text-black border-2 my-1 p-2 font-light rounded-md outline-none border-neutral-300">
+                <label for="password">Password </label>
+                <input type="password" name="password" id="password" required class="bg-neutral-300 text-black border-2 my-1 p-2 font-light rounded-md outline-none border-neutral-300">
+                </div>
+                 <% if(error) { %>
+                <div class="text-red-500 text-sm mt-3" role="alert"><%= error %></div>
+                <% } %>
+                <button type="submit" class="p-2 mt-4 hover:cursor-pointer rounded-md w-full bg-[#001bff]/60 hover:bg-[#001bff]">Create Account</button>
+            </form>
+        </main>
+  </body>
+</html>

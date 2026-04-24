@@ -1,0 +1,18 @@
+
+<nav class="flex items-center justify-between">
+        <a
+      href="/"
+      class="text-[#001bff]"
+    >
+      &lt; Home
+    </a>
+     <% if(currentUser) {%>
+                <form action="/logout" method="POST">
+                    <button type="submit" class="hover:cursor-pointer text-xs bg-[#001bff]/60 hover:bg-[#001bff] p-2 rounded-md mt-2">
+                        Logout
+                    </button>
+                </form>
+    
+    <% } %>
+               
+</nav>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="/css/output.css"
+    />
+  </head>
+  <body class="bg-black text-neutral-200 m-4">
+       <%- include("../partials/navbar") %>
+
+    <main class="flex flex-col mx-auto p-10">
+      <h1 class="mb-3">Create A Post (max 150 char limit)</h1>
+      <div>
+        <form
+          action="/createPost"
+          method="POST"
+        >
+          <textarea
+            name="content"
+            required
+            placeholder="type something..."
+            maxLength="150"
+            rows="2"
+            class="p-2 rounded-md border border-neutral-300 w-full"
+          ></textarea>
+          <% if(error) { %>
+            <p class="text-red-500 text-sm" role="alert"><%= error %></p>
+          <% } %>  
+          <button
+            type="submit"
+            class="hover:cursor-pointer relative py-3 my-3 text-white w-full rounded-lg bg-[#001bff]/60 hover:bg-[#001bff]"
+          >
+            Post
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

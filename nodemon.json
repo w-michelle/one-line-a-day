@@ -1,0 +1,6 @@
+{
+  "watch": ["index.ts", "src"],
+  "ext": "ts,ejs,css",
+  "ignore": ["src/public/css/output.css"],
+  "exec": "ts-node index.ts"
+}
