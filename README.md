@@ -4,7 +4,7 @@ A micro blogging app where only members can write posts and view who the author 
 Non-members can only see the content and wonder who wrote it.
 To join the club, users must enter the secret 4 digit passcode. **To join, use [4949]**
 
-**[View Site](https://onelineaday.vercel.app)**
+**[View Site](https://one-line-a-day-plum.vercel.app)**
 
 ## Built With
 
