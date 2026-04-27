@@ -12,7 +12,6 @@ To join the club, users must enter the secret 4 digit passcode. **To join, use [
 - Node.js
 - EJS
 - MongoDB
-- Redux
 - JWT Authentication
 
 ## Features
